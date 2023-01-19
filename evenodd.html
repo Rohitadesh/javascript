@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document</title>
+    <style>
+        *{
+            padding:0;
+            margin:0;
+        }
+        .box{
+            width:20%;
+            height:20vh;
+            border:1px solid black;
+            background-color: lightgray;
+            margin:20%;
+        }
+        .flex{
+            display:flex;
+            flex-direction: column;
+            flex-wrap:wrap;
+            justify-content: center;
+            align-content: space-between;
+            gap:3%;
+            /* margin-right:% ; */
+            right:10px;
+        }
+        #in{
+            width:60%;
+        }
+        .button{
+            width: 30%;
+        }
+    </style>
+</head>
+<body>
+    <div class="box flex">
+        <label for="number">Number:</label>
+        <input type="text" id="input">
+        <button type="button" class="button" onclick="test()">Test</button>
+    </div>
+    <script>
+        let Input=document.getElementById("input");
+        function test(Input){
+            Input.innerhtml
+            
+        }
+    </script>
+</body>
+</html>
