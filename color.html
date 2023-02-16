@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="color.css">
+</head>
+<body>
+    <div class="container flex">
+        <div class="subcontainer subflex">
+            <input type="button" value="color genrator" id="btn">
+        </div>
+    </div>
+    <script>
+        let btn=document.querySelector('#btn');
+        let i=0;
+        btn.addEventListener('click',color=>{
+            let contain=document.querySelector('.container');
+            let colors=["red","yellow","black","blue","white","green"];
+            contain.style.backgroundColor=colors[i]
+            i++;
+            });
+    </script>
+</body>
+</html>
