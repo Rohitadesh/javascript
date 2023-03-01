@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   <div class="container flex1">
+       <div class="subcontainer flex">
+           <h1>guessword:</h1>
+           <h1 id="random"></h1>
+           <input type="text" id="input">
+           <input type="button" value="guess" id="guess">
+           <input type="button" value="Refersh" class="refersh">
+           <h1 class="correct"></h1>
+       </div>
+   </div>
+   <script>
+    let correct1=0;
+//    window.onload=function(){
+      input = document.getElementById('input');
+      words = document.getElementById('random');
+      guess= document.getElementById('guess');
+      correct = document.querySelector('.correct');
+      random = document.getElementById('random');
+      refersh = document.querySelector('.refersh');
+/*
+      let i=0
+      let random_problem = function (){
+        //   document.querySelector(".correct").style.display = "none";
+          let questions=["javascript","python","react","nodejs"]
+          let split_question=questions[i]
+          let correct1=split_question
+          result()
+          let word=split_question.split('')
+          let random_words=word.sort(()=>Math.random()-0.5).join('')
+          random.innerHTML=random_words
+          i+=1;
+
+      // random_problem();
+
+      refersh.addEventListener('click',random_problem);
+
+      let result=function(){
+        document.querySelector(".correct").style.display = "block";
+          if(input.value==correct1){
+            console.log(correct1)
+            correct.innerHTML='its correct';
+          }
+          else{
+              correct.innerHTML='its not correct';
+          }
+      }
+
+      guess.addEventListener('click',result)
+    // }
+
+    */
+
+    let i =0;
+    let questions=["javascript","python","react","nodejs"]
+
+      let display = ()=>{
+          let word = questions[i].split('');
+          let random_words=word.sort(()=>Math.random()-0.5).join('')
+          random.innerHTML=random_words
+      }
+
+      let next = ()=>{
+         (i > questions.length)?i=0:i+=1;
+          display()
+      }
+
+      refersh.addEventListener('click',next);
+
+      display()
+
+     let result = ()=>{
+      let inp = input.value
+
+      // console.log(questions[i]);
+
+      if(questions[i]== inp){
+        input.value = ''
+        // console.log("correc");
+        next()
+        correct.innerHTML='correct'
+        
+       
+
+      }
+      else{
+        input.value = ""
+        correct.innerHTML='not correct'
+      }
+
+
+     }
+     guess.addEventListener('click',result)
+
+     
+
+   </script>
+</body>
+</html>
