@@ -16,12 +16,14 @@
     <script>
         let btn=document.querySelector('#btn');
         let i=0;
-        btn.addEventListener('click',color=>{
+        function random(){
             let contain=document.querySelector('.container');
             let colors=["red","yellow","black","blue","white","green"];
             contain.style.backgroundColor=colors[i]
             i++;
-            });
+            console.log(i)
+        }
+        btn.addEventListener('click',random);
     </script>
 </body>
 </html>
